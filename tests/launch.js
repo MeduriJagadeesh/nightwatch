@@ -13,6 +13,7 @@ module.exports = {
         .click('input[type="button"]')
         .assert.titleContains('Juliette - App Users')
         .waitForElementPresent('.rmm-toggled-title')
+        .end();
         
     },
     
