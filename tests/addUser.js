@@ -1,5 +1,5 @@
 module.exports = {
-    'Login HomePage' : function (browser) {
+    'Login HomePage' : function login(browser) {
       browser
         .url("http://ec2-35-166-133-120.us-west-2.compute.amazonaws.com/admin/login")
         .waitForElementVisible('.header')
@@ -11,14 +11,14 @@ module.exports = {
         .waitForElementPresent('.rmm-toggled-title')
     },
 
-    'Add User' : function (browser) {
+    'Add User' : function addUser(browser) {
         browser
         .useXpath()
         .click('//a[contains(text(),"Add New")]')
         .useCss()
         .setValue('#invite_id','TYU')
         .setValue('#apartment','104')
-        //.setValue('#acode','123')
+        .setValue('#acode','123')
         .setValue('#fname','scott')
         .setValue('#lname','William')
         .setValue('#email','mail1@mailinator.com')
@@ -34,7 +34,7 @@ module.exports = {
 
     },
 
-    'Logout' : function (browser) {
+    'Logout' : function logout(browser) {
         browser
         .useXpath()
         .click('//a[contains(text(),"logout")]')
