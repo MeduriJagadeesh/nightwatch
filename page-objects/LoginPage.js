@@ -7,9 +7,10 @@ module.exports={
         submitButton:'input[type="button"]'
     },
     commands:[{
-        verifyHeaderLoaded(){
+        verifyLoginPageLoaded(){
             return this
                 .waitForElementVisible('@logInPageHeader')
+                .assert.titleContains('Juliette - Login')
         }, 
         performLogin(username,password){
             return this
